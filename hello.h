@@ -5,7 +5,7 @@
 
 G_BEGIN_DECLS
 
-#define TEST_TYPE_HELLO test_hello_get_type ()
+#define TEST_TYPE_HELLO (test_hello_get_type ())
 
 G_DECLARE_FINAL_TYPE (TestHello, test_hello, Test, HELLO, GObject)
 
