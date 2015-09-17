@@ -1,3 +1,3 @@
 Hotdoc Test API
 
-#### [TestHello](test-hello.markdown)
+#### [TestGreeter](test-greeter.markdown)

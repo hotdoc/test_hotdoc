@@ -5,8 +5,8 @@ hotdoc = import ('hotdoc')
 glib_dep = dependency('glib-2.0')
 gobject_dep = dependency('gobject-2.0')
 
-sources = ['hello.c']
-headers = ['hello.h']
+sources = ['test-greeter.c']
+headers = ['test-greeter.h']
 
 test_lib = shared_library('test_lib',
 		          sources,
@@ -35,7 +35,10 @@ doc = hotdoc.generate_doc (input: sources + headers,
 			   library: test_lib,
 			   index: markdown_index,
 			   style: 'gnome',
-			   girtargets: gir)
+			   extensions: ['gi-extension'],
+			   gir_file: gir,
+			   gir_languages: 'c',
+			   )
 
 gen_html = '@0@/@1@'.format(meson.current_build_dir(), 'html')
 ref_html = '@0@/@1@'.format(meson.current_source_dir(), 'html_reference')
