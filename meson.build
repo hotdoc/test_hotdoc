@@ -31,13 +31,12 @@ markdown_index = '@0@/@1@'.format(meson.current_source_dir(), 'index.markdown')
 doc = hotdoc.generate_doc (input: sources + headers,
 			   c_sources: '@INPUT@',
 			   output: 'html',
-			   depends: gir,
+			   output_format: 'html',
+			   depends: gir[0],
 			   library: test_lib,
 			   index: markdown_index,
 			   style: 'gnome',
-			   extensions: ['gi-extension'],
-			   gir_file: gir,
-			   gir_languages: 'c',
+			   extra_args: ['gi-extension', '--gir-file', gir[0], '--languages', ['c', 'python', 'javascript'], '--major-version', '1.0'],
 			   )
 
 gen_html = '@0@/@1@'.format(meson.current_build_dir(), 'html')
