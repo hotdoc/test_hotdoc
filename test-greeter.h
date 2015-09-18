@@ -85,6 +85,8 @@ void test_greeter_greet (TestGreeter *self,
  * Increments the greet counter.
  *
  * MT safe.
+ *
+ * Returns: void
  */
 #define TEST_GREETER_UPDATE_GREET_COUNT(greeter) \
 G_STMT_START {                                   \
