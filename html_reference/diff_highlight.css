@@ -1,0 +1,10 @@
+ins {
+	border-bottom: 1px solid #ccc;
+	text-decoration: none;
+	color: #388807;
+}
+
+del {
+	text-decoration: none;
+	color: #91081f;
+}

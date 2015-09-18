@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 
-import sys, os
+import sys, os, shutil
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -31,8 +31,10 @@ def diff_html(ref_path, gen_path):
     if inserted or deleted:
         diff_filename = '%s.diff.html' % gen_path
         sys.stderr.write ("There's a difference, you can open %s"
-                " with your browser to look at it" % diff_filename)
+                " with your browser to look at it\n" % diff_filename)
         with open (diff_filename, 'w') as f:
+            f.write ('<head><link rel="stylesheet" type="text/css"'
+                     'href="../diff_highlight.css"></head>')
             f.write (result)
         res = False
 
@@ -58,6 +60,12 @@ if __name__=='__main__':
                 gen_path = os.path.join (gen_html_folder, filename, filename2)
                 if not diff_html (ref_path, gen_path):
                     result += 1
+
+
+    if result != 0:
+        diff_css_path = os.path.join (ref_html_folder, 'diff_highlight.css')
+        diff_css_new_path = os.path.join (gen_html_folder, 'diff_highlight.css')
+        shutil.copy2(diff_css_path, diff_css_new_path)
 
     print "exiting with result", result
     sys.exit(result)
