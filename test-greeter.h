@@ -24,14 +24,14 @@ typedef struct _TestGreeterClass TestGreeterClass;
  *
  * Returns: (transfer full): The translation of @word
  */
-typedef gchar* (* TestGreeterTranslateFunction) (TestGreeter *greeter, const gchar *word);
+typedef gchar * (* TestGreeterTranslateFunction) (TestGreeter *greeter, const gchar *word);
 
 /**
- * GreetCountUnit:
+ * TestGreeterCountUnit:
  *
  * The unit in which greets are counted.
  */
-typedef gint GreetCountUnit;
+typedef gint TestGreeterCountUnit;
 
 /**
  * TestGreeterClass:
@@ -47,6 +47,7 @@ struct _TestGreeterClass
 /**
  * TestGreeter:
  * @greet_count: The number of times the greeter greeted.
+ * @peer: A peer #TestGreeter
  *
  * The #TestGreeter structure. Use the functions to update
  * the variables;
@@ -54,7 +55,8 @@ struct _TestGreeterClass
 struct _TestGreeter
 {
   GObject parent;
-  GreetCountUnit greet_count;
+  TestGreeterCountUnit greet_count;
+  TestGreeter *peer;
   /*< private >*/
   gboolean count_greets;
 };
@@ -66,11 +68,14 @@ GType test_greeter_get_type ();
  *
  * The number of times the greeter greeted.
  */
-extern GreetCountUnit test_greeter_greet_count;
+extern TestGreeterCountUnit test_greeter_greet_count;
 
 void test_greeter_greet (TestGreeter *self,
                          const gchar *name,
                          TestGreeterTranslateFunction translator);
+
+guint
+test_greeter_do_foo_bar (gint *foo, gchar *bar);
 
 /**
  * TEST_GREETER_VERSION:

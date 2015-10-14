@@ -1,6 +1,6 @@
 #include "test-greeter.h"
 
-GreetCountUnit test_greeter_greet_count = 0;
+TestGreeterCountUnit test_greeter_greet_count = 0;
 
 /**
  * SECTION:testgreeter
@@ -69,7 +69,7 @@ test_greeter_class_init (TestGreeterClass *klass)
   /**
    * TestGreeter:count-greets:
    *
-   * Set to FALSE if you don't want the greeter to count its greets
+   * Set to %FALSE if you don't want the greeter to count its greets
    */
   g_object_class_install_property (gobject_class, TEST_GREETER_PROP_COUNT_GREETS,
       g_param_spec_boolean ("count-greets", "Count Greets", "Count the greets",
@@ -79,13 +79,17 @@ test_greeter_class_init (TestGreeterClass *klass)
    * TestGreeter::greeted:
    * @greeter: the greeter that emitted the signal
    * @name: the name that was greeted
+   * @object: A random GObject
+   * @other_greeter: A peer greeter, greeting is better done together
    *
    * Signals that the greeter greeted somebody.
+   *
+   * Returns: A random string
    */
   test_greeter_signals[TEST_GREETER_SIGNAL_GREETED] =
       g_signal_new ("greeted", G_TYPE_FROM_CLASS (klass), G_SIGNAL_RUN_LAST,
       0, NULL, NULL,
-      g_cclosure_marshal_generic, G_TYPE_NONE, 1, G_TYPE_STRING);
+      g_cclosure_marshal_generic, G_TYPE_STRING, 3, G_TYPE_STRING, G_TYPE_OBJECT, TEST_TYPE_GREETER);
 }
 
 static void
@@ -118,8 +122,8 @@ translate_to_french (TestGreeter *greeter, const gchar *word)
  * test_greeter_greet:
  * @self: The #TestGreeter
  * @name: The name to greet
- * @translator: (allow-none): A function that will need
- * to translate "hello".
+ * @translator: (allow-none) (scope async): A function that will need
+ * to translate "hello", or %NULL.
  *
  * Will greet whoever you want, you can specify a function
  * to translate the greeting.
@@ -147,11 +151,26 @@ test_greeter_greet (TestGreeter *self,
 }
 
 /**
+ * test_greeter_do_foo_bar:
+ * @foo: (out): something to foo
+ * @bar: something to bar
+ *
+ * Returns: A nice number
+ */
+guint
+test_greeter_do_foo_bar (gint *foo, gchar *bar)
+{
+  *foo = 57;
+
+  return 42;
+}
+
+/**
  * test_greeter_get_translate_function:
  * @greeter: The #TestGreeter
  * @language: The target #TestGreeterLanguage
  *
- * Returns: a #TestGreeterTranslateFunction for the target @language.
+ * Returns: a #TestGreeterTranslateFunction for the target @language or %NULL.
  */
 TestGreeterTranslateFunction
 test_greeter_get_translate_function (TestGreeter *greeter, TestGreeterLanguage language)

@@ -27,6 +27,9 @@ gir = gnome.generate_gir(test_lib,
 )
 
 markdown_index = '@0@/@1@'.format(meson.current_source_dir(), 'index.markdown')
+dbus_markdown_index = '@0@/@1@'.format(meson.current_source_dir(), 'dbus-index.markdown')
+
+dbus_sources = ['@0@/@1@'.format(meson.current_source_dir(), 'org.test.Launcher.xml')]
 
 doc = hotdoc.generate_doc (input: sources + headers,
 			   c_sources: '@INPUT@',
@@ -36,7 +39,10 @@ doc = hotdoc.generate_doc (input: sources + headers,
 			   library: test_lib,
 			   index: markdown_index,
 			   style: 'gnome',
-			   extra_args: ['gi-extension', '--gir-file', gir[0], '--languages', ['c', 'python', 'javascript'], '--major-version', '1.0'],
+			   extra_args: ['gi-extension', '--gir-file', gir[0],
+			   		'--languages', ['c', 'python', 'javascript'], '--major-version', '1.0',
+					'dbus-extension', '--dbus-sources', dbus_sources,
+					'--dbus-index', dbus_markdown_index],
 			   )
 
 gen_html = '@0@/@1@'.format(meson.current_build_dir(), 'html')
