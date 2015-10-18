@@ -26,13 +26,18 @@ gir = gnome.generate_gir(test_lib,
   install : true
 )
 
+markdown_files = ['index.markdown',
+		  'test-api.markdown',
+		  'test-greeter.markdown',
+		  'org-test-greeter.markdown',
+		 ]
+
 markdown_index = '@0@/@1@'.format(meson.current_source_dir(), 'index.markdown')
-dbus_markdown_index = '@0@/@1@'.format(meson.current_source_dir(), 'dbus-index.markdown')
 
-dbus_sources = ['@0@/@1@'.format(meson.current_source_dir(), 'org.test.Launcher.xml')]
+dbus_sources = ['@0@/@1@'.format(meson.current_source_dir(), 'org.test.greeter.xml')]
 
-doc = hotdoc.generate_doc (input: sources + headers,
-			   c_sources: '@INPUT@',
+doc = hotdoc.generate_doc (input: sources + headers + markdown_files,
+			   c_sources: sources + headers,
 			   output: 'html',
 			   output_format: 'html',
 			   depends: gir[0],
@@ -41,8 +46,7 @@ doc = hotdoc.generate_doc (input: sources + headers,
 			   style: 'gnome',
 			   extra_args: ['gi-extension', '--gir-file', gir[0],
 			   		'--languages', ['c', 'python', 'javascript'], '--major-version', '1.0',
-					'dbus-extension', '--dbus-sources', dbus_sources,
-					'--dbus-index', dbus_markdown_index],
+					'dbus-extension', '--dbus-sources', dbus_sources],
 			   )
 
 gen_html = '@0@/@1@'.format(meson.current_build_dir(), 'html')

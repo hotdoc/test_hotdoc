@@ -55,6 +55,8 @@ struct _TestGreeterClass
 struct _TestGreeter
 {
   GObject parent;
+
+  /*< public >*/
   TestGreeterCountUnit greet_count;
   TestGreeter *peer;
   /*< private >*/

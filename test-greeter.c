@@ -126,7 +126,7 @@ translate_to_french (TestGreeter *greeter, const gchar *word)
  * to translate "hello", or %NULL.
  *
  * Will greet whoever you want, you can specify a function
- * to translate the greeting.
+ * to translate the greetings.
  */
 void
 test_greeter_greet (TestGreeter *self,
@@ -154,6 +154,9 @@ test_greeter_greet (TestGreeter *self,
  * test_greeter_do_foo_bar:
  * @foo: (out): something to foo
  * @bar: something to bar
+ *
+ * This function is here to test that out parameters
+ * are correctly interpreted as return values for python and javascript.
  *
  * Returns: A nice number
  */

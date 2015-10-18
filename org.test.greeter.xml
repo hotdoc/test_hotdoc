@@ -1,0 +1,52 @@
+<node>
+<!--
+  org.test.greeter:
+  @short_description: The greeter service provides greeting services. Be polite, #machineshavefeelings
+
+-->
+
+<interface name="org.test.greeter">
+  <!--
+    Greet:
+    @name: Name to greet
+    @since: 1.0
+
+    Function that greets the given @name
+  -->
+  <method name="Greet">
+    <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+    <arg name="name" direction="in" type="s"/>
+  </method>
+
+<!--
+    CompletedGreet:
+    @name: The name that was greeted
+    @since: 1.0
+
+    Function that signals @name was greeted.
+  -->
+  <method name="CompletedGreet">
+    <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+    <arg name="name" direction="out" type="s"/>
+  </method>
+
+  <!--
+    InformGreeting:
+    @name: name that is being greeted
+    @since: 1.0
+
+    Signal emitted when @name is greeted
+  -->
+  <signal name="InformGreeting">
+    <arg name="name" type="s"/>
+  </signal>
+
+  <!--
+    LastGreetedName:
+    @since: 1.1
+
+    Get the last name that was greeted
+  -->
+  <property name="LastGreetedName" type="s" access="read"/>
+</interface>
+</node>
