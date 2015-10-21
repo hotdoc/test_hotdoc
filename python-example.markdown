@@ -1,0 +1,8 @@
+* [python_example.ExampleClass]()
+* [python_example.ExampleClass.__init__]()
+* [python_example.ExampleClass.example_method]()
+* [python_example.ExampleClass.__special__]()
+* [python_example.module_level_function]()
+* [python_example.example_generator]()
+* [python_example.ExampleError]()
+* [python_example.ExampleError.__init__]()

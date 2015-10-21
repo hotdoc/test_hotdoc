@@ -35,6 +35,7 @@ markdown_files = ['index.markdown',
 markdown_index = '@0@/@1@'.format(meson.current_source_dir(), 'index.markdown')
 
 dbus_sources = ['@0@/@1@'.format(meson.current_source_dir(), 'org.test.greeter.xml')]
+python_sources = ['@0@/@1@'.format(meson.current_source_dir(), 'python_example.py')]
 
 doc = hotdoc.generate_doc (input: sources + headers + markdown_files,
 			   c_sources: sources + headers,
@@ -46,7 +47,8 @@ doc = hotdoc.generate_doc (input: sources + headers + markdown_files,
 			   style: 'gnome',
 			   extra_args: ['gi-extension', '--gir-file', gir[0],
 			   		'--languages', ['c', 'python', 'javascript'], '--major-version', '1.0',
-					'dbus-extension', '--dbus-sources', dbus_sources],
+					'dbus-extension', '--dbus-sources', dbus_sources, '--end-dbus-sources',
+					'python-extension', '--python-sources', python_sources],
 			   )
 
 gen_html = '@0@/@1@'.format(meson.current_build_dir(), 'html')

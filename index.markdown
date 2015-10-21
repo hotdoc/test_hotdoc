@@ -1,6 +1,7 @@
 Welcome to the Hotdoc test documentation amigo mio.
 
-#### [API reference](test-api.markdown)
+#### [GObject API reference](test-api.markdown)
 #### [DBus API reference](test-dbus-api.markdown)
+#### [Native Python API reference](test-python-api.markdown)
 #### [Object Hierarchy]()
 #### [API Index]()
