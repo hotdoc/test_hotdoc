@@ -1,3 +1,3 @@
 Welcome to the Hotdoc test documentation amigo mio.
 
-#### [GObject API reference](gobject-api)
+#### [GObject API reference](test-api.markdown)
