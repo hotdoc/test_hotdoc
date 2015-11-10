@@ -34,7 +34,7 @@ markdown_files = ['index.markdown',
 		 ]
 
 markdown_index = '@0@/@1@'.format(meson.current_source_dir(), 'index.markdown')
-gi_index = '@0@/@1@'.format(meson.current_source_dir(), 'gobject-api.markdown')
+gi_index = 'gobject-api.markdown'
 
 
 dbus_sources = ['@0@/@1@'.format(meson.current_source_dir(), 'org.test.greeter.xml')]
@@ -43,16 +43,17 @@ python_sources = ['@0@/@1@'.format(meson.current_source_dir(), 'python_example.p
 c_sources = ['@0@/@1@'.format(meson.current_source_dir(), 'test-greeter.c'),
 	     '@0@/@1@'.format(meson.current_source_dir(), 'test-greeter.h')]
 
+gir_file = '@0@/@1@'.format(meson.current_build_dir(), 'Test-1.0.gir')
+
 doc = hotdoc.generate_doc (input: sources + headers + markdown_files,
 			   output: 'html',
 			   output_format: 'html',
 			   depends: gir[0],
 			   library: test_lib,
 			   index: markdown_index,
-			   style: 'gnome',
 			   extra_args: ['c-extension', '--clang-options', '-I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include',
 			   		'--c-sources', c_sources, '--end-c-sources',
-			   		'gi-extension', '--gir-file', gir[0],
+			   		'gi-extension', '--gir-file', gir_file,
 			   		'--languages', ['c', 'python', 'javascript'], '--major-version', '1.0',
 					'--gi-index', gi_index
 				       ]

@@ -50,7 +50,7 @@ struct _TestGreeterClass
  * @peer: A peer #TestGreeter
  *
  * The #TestGreeter structure. Use the functions to update
- * the variables;
+ * the variables please;
  */
 struct _TestGreeter
 {

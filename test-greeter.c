@@ -5,6 +5,7 @@ TestGreeterCountUnit test_greeter_greet_count = 0;
 /**
  * SECTION:testgreeter
  * @short_description: This is a very helpful greeting API.
+ * @title: The Test Greeter
  *
  * A #TestGreeter will certainly greet you at some
  * point, so be prepared.
@@ -157,6 +158,9 @@ test_greeter_greet (TestGreeter *self,
  *
  * This function is here to test that out parameters
  * are correctly interpreted as return values for python and javascript.
+ *
+ * This function also checks that referring to signals that way:
+ * #TestGreeter::greeted works correctly.
  *
  * Returns: A nice number
  */
