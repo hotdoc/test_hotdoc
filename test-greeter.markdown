@@ -1,5 +1,7 @@
 ### TestGreeter
 
+A [test greeter](TestGreeter) will certainly greet you at some point, so be prepared.
+
 * [TestGreeter]()
 * [TEST_GREETER_VERSION]()
 * [test_greeter_greet]()

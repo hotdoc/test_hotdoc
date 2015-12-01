@@ -1,0 +1,21 @@
+{
+    "index": "index.markdown", 
+    "c_sources": [
+        "*.c", 
+        "*.h"
+    ], 
+    "output_format": "html", 
+    "major_version": "0.1", 
+    "pkg_config_packages": [
+        "gobject-2.0"
+    ], 
+    "languages": [
+        "c", 
+        "python", 
+        "javascript"
+    ], 
+    "gi_index": "gobject-api.markdown", 
+    "output": "html", 
+    "gir_file": "build/Test-1.0.gir", 
+    "git_repo": "."
+}

@@ -71,6 +71,7 @@ test_greeter_class_init (TestGreeterClass *klass)
    * TestGreeter:count-greets:
    *
    * Set to %FALSE if you don't want the greeter to count its greets
+   * Stability: stable
    */
   g_object_class_install_property (gobject_class, TEST_GREETER_PROP_COUNT_GREETS,
       g_param_spec_boolean ("count-greets", "Count Greets", "Count the greets",
@@ -85,7 +86,9 @@ test_greeter_class_init (TestGreeterClass *klass)
    *
    * Signals that the greeter greeted somebody.
    *
+   * Stability: unstable
    * Returns: A random string
+   * Since: 0.9
    */
   test_greeter_signals[TEST_GREETER_SIGNAL_GREETED] =
       g_signal_new ("greeted", G_TYPE_FROM_CLASS (klass), G_SIGNAL_RUN_LAST,
@@ -128,6 +131,8 @@ translate_to_french (TestGreeter *greeter, const gchar *word)
  *
  * Will greet whoever you want, you can specify a function
  * to translate the greetings.
+ *
+ * Since: 0.5
  */
 void
 test_greeter_greet (TestGreeter *self,
@@ -163,6 +168,7 @@ test_greeter_greet (TestGreeter *self,
  * #TestGreeter::greeted works correctly.
  *
  * Returns: A nice number
+ * Since: 0.8
  */
 guint
 test_greeter_do_foo_bar (gint *foo, gchar *bar)
@@ -178,6 +184,7 @@ test_greeter_do_foo_bar (gint *foo, gchar *bar)
  * @language: The target #TestGreeterLanguage
  *
  * Returns: a #TestGreeterTranslateFunction for the target @language or %NULL.
+ * Stability: unstable
  */
 TestGreeterTranslateFunction
 test_greeter_get_translate_function (TestGreeter *greeter, TestGreeterLanguage language)
