@@ -84,7 +84,7 @@ test_greeter_class_init (TestGreeterClass *klass)
    * @object: A random GObject
    * @other_greeter: A peer greeter, greeting is better done together
    *
-   * Signals that the greeter greeted somebody.
+   * Signals that the greeter greeted somebody plop.
    *
    * Stability: unstable
    * Returns: A random string
