@@ -3,7 +3,7 @@
 TestGreeterCountUnit test_greeter_greet_count = 0;
 
 /**
- * TestGreeter::TestGreeter
+ * TestGreeter::TestGreeter:
  * @short_description: This is a very helpful greeting API.
  * @title: The Test Greeter
  *
