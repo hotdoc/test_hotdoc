@@ -1,5 +1,9 @@
 {
     "index": "index.markdown", 
+    "python_index": "python-api.markdown", 
+    "dbus_sources": [
+        "*.xml"
+    ], 
     "c_sources": [
         "*.c", 
         "*.h"
@@ -7,11 +11,11 @@
     "python_sources": [
         "python_example.py"
     ], 
-    "dbus_sources": [
-        "*.xml"
-    ],
     "output_format": "html", 
     "major_version": "0.1", 
+    "tag_prototypes": [
+        "my_tag:foo,bar,baz:foo"
+    ], 
     "pkg_config_packages": [
         "gobject-2.0"
     ], 
@@ -20,10 +24,9 @@
         "python", 
         "javascript"
     ], 
-    "gi_index": "gobject-api.markdown",
-    "python_index": "python-api.markdown",
-    "dbus_index": "test-dbus-api.markdown",
+    "gi_index": "gobject-api.markdown", 
     "output": "html", 
     "gir_file": "build/Test-1.0.gir", 
+    "dbus_index": "test-dbus-api.markdown", 
     "git_repo": "."
 }

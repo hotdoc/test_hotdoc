@@ -133,6 +133,7 @@ translate_to_french (TestGreeter *greeter, const gchar *word)
  * to translate the greetings.
  *
  * Since: 0.5
+ * my_tag: baz
  */
 void
 test_greeter_greet (TestGreeter *self,
@@ -169,6 +170,7 @@ test_greeter_greet (TestGreeter *self,
  *
  * Returns: A nice number
  * Since: 0.8
+ * my_tag: bar
  */
 guint
 test_greeter_do_foo_bar (gint *foo, gchar *bar)
