@@ -1,24 +1,27 @@
-This is a test project for [hotdoc](https://github.com/MathieuDuponchelle/hotdoc)
+This is a test project for [hotdoc](https://github.com/hotdoc/hotdoc)
 
-To build the library, use:
+This project uses the gobject-introspection extension, and is configured
+to use a gir file at build/Test-1.0.gir.
 
-```shell
+You can either build it yourself:
+
+```
 $ mkdir build
 $ cd build
 $ meson ..
 $ ninja
 ```
 
-To run the tests, use:
+or copy over the default gir:
 
-```shell
-ninja test
+```
+mkdir build
+cp Test-1.0.gir build
+cd build
 ```
 
-You can then take a look at the result of the test in build/meson-logs/testlog.txt ,
-if there are any differences you can check the files in 'html' suffixed with
-diff.html, either with a text editor by looking for `<ins>` and `<del>` tags,
-or with a web browser.
+You can now run hotdoc with:
 
-Once you made sure the differences were legitimate, you can update the files
-in html_reference and make a pull request.
+```
+hotdoc run --conf-file ../hotdoc.json
+```
