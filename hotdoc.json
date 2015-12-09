@@ -4,6 +4,12 @@
         "*.c", 
         "*.h"
     ], 
+    "python_sources": [
+        "python_example.py"
+    ], 
+    "dbus_sources": [
+        "*.xml"
+    ],
     "output_format": "html", 
     "major_version": "0.1", 
     "pkg_config_packages": [
@@ -14,7 +20,9 @@
         "python", 
         "javascript"
     ], 
-    "gi_index": "gobject-api.markdown", 
+    "gi_index": "gobject-api.markdown",
+    "python_index": "python-api.markdown",
+    "dbus_index": "test-dbus-api.markdown",
     "output": "html", 
     "gir_file": "build/Test-1.0.gir", 
     "git_repo": "."
