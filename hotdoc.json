@@ -1,32 +1,32 @@
 {
-    "index": "index.markdown", 
-    "python_index": "python-api.markdown", 
     "dbus_sources": [
         "*.xml"
     ], 
+    "output_format": "html", 
+    "pkg_config_packages": [
+        "gobject-2.0"
+    ], 
+    "gi_index": "gobject-api.markdown", 
+    "git_repo": ".", 
+    "python_index": "python-api.markdown", 
     "c_sources": [
         "*.c", 
         "*.h"
     ], 
+    "index": "index.markdown", 
     "python_sources": [
         "python_example.py"
     ], 
-    "output_format": "html", 
     "major_version": "0.1", 
     "tag_prototypes": [
         "my_tag:foo,bar,baz:foo"
-    ], 
-    "pkg_config_packages": [
-        "gobject-2.0"
     ], 
     "languages": [
         "c", 
         "python", 
         "javascript"
     ], 
-    "gi_index": "gobject-api.markdown", 
     "output": "html", 
     "gir_file": "build/Test-1.0.gir", 
-    "dbus_index": "test-dbus-api.markdown", 
-    "git_repo": "."
+    "dbus_index": "test-dbus-api.markdown"
 }

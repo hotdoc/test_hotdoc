@@ -1,3 +1,5 @@
-Welcome to the Hotdoc test documentation amigo mio.
+## Hotdoc Test GObject API 
 
-#### [GObject API reference](test-api.markdown)
+This section documents Hotdoc Test's GObject API for C, python and javascript.
+
+#### [Pick your language](test-api.markdown)
