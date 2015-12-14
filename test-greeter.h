@@ -116,6 +116,9 @@ typedef enum {
 TestGreeterTranslateFunction
 test_greeter_get_translate_function (TestGreeter *greeter, TestGreeterLanguage language);
 
+void
+test_greeter_deprecated_function (TestGreeter *greeter);
+
 G_END_DECLS
 
 #endif

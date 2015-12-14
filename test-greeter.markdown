@@ -5,6 +5,7 @@ A [test greeter](TestGreeter) will certainly greet you at some point, so be prep
 * [TestGreeter]()
 * [TEST_GREETER_VERSION]()
 * [test_greeter_greet]()
+* [test_greeter_deprecated_function]()
 * [test_greeter_get_translate_function]()
 * [TEST_GREETER_UPDATE_GREET_COUNT]()
 * [TestGreeterTranslateFunction]()

@@ -123,6 +123,21 @@ translate_to_french (TestGreeter *greeter, const gchar *word)
 }
 
 /**
+ * test_greeter_deprecated_function:
+ * @greeter: a random greeter
+ *
+ * This is just a function that we will mark as deprecated
+ * because it really sucked.
+ *
+ * Deprecated: 0.7
+ */
+void
+test_greeter_deprecated_function(TestGreeter *greeter)
+{
+  g_print ("I am deprecated, why even use me ?\n");
+}
+
+/**
  * test_greeter_greet:
  * @self: The #TestGreeter
  * @name: The name to greet
