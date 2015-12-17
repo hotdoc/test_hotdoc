@@ -1,4 +1,4 @@
-## Hotdoc Test's GObject API
+## GObject API
 
 #### [TestGreeter](test-greeter.markdown)
 

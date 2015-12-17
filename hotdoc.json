@@ -6,7 +6,7 @@
     "pkg_config_packages": [
         "gobject-2.0"
     ], 
-    "gi_index": "gobject-api.markdown", 
+    "gi_index": "test-api.markdown", 
     "git_repo": ".", 
     "python_index": "python-api.markdown", 
     "c_sources": [
@@ -28,5 +28,6 @@
     ], 
     "output": "html", 
     "gir_file": "build/Test-1.0.gir", 
-    "dbus_index": "test-dbus-api.markdown"
+    "dbus_index": "test-dbus-api.markdown",
+    "html_theme": "/home/meh/devel/hotdoc/hotdoc_bootstrap_theme/dist"
 }

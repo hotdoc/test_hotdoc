@@ -1,3 +1,3 @@
-Hotdoc Test Python API
+## Python API
 
 #### [ExampleClass](python-example.markdown)
