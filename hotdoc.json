@@ -28,6 +28,5 @@
     ], 
     "output": "html", 
     "gir_file": "build/Test-1.0.gir", 
-    "dbus_index": "test-dbus-api.markdown",
-    "html_theme": "/home/meh/devel/hotdoc/hotdoc_bootstrap_theme/dist"
+    "dbus_index": "test-dbus-api.markdown"
 }
