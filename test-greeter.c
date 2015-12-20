@@ -145,7 +145,7 @@ test_greeter_deprecated_function(TestGreeter *greeter)
  * to translate "hello", or %NULL.
  *
  * Will greet whoever you want, you can specify a function
- * to translate the greetings. test
+ * to translate the greetings. testing this
  *
  * Since: 0.5
  * my_tag: baz
