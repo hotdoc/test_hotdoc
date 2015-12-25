@@ -129,6 +129,8 @@ translate_to_french (TestGreeter *greeter, const gchar *word)
  * This is just a function that we will mark as deprecated
  * because it really sucked.
  *
+ * Mentioning %TEST_GREETER_ENGLISH by the way
+ *
  * Deprecated: 0.7
  */
 void
