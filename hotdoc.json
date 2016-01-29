@@ -28,5 +28,6 @@
     ], 
     "output": "html", 
     "gir_file": "build/Test-1.0.gir", 
-    "dbus_index": "test-dbus-api.markdown"
+    "dbus_index": "test-dbus-api.markdown",
+    "include_paths": ["."]
 }

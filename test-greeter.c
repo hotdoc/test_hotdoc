@@ -149,6 +149,10 @@ test_greeter_deprecated_function(TestGreeter *greeter)
  * Will greet whoever you want, you can specify a function
  * to translate the greetings. testing this again and again
  *
+ * {{includeme.markdown}}
+ *
+ * Just {{include something .markdown}} at the middle of a line
+ *
  * Since: 0.5
  * my_tag: baz
  */
