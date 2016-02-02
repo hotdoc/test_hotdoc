@@ -2,6 +2,8 @@
 
 A [test greeter](TestGreeter) will certainly greet you at some point, so be prepared.
 
+this {{should_not_exist.markdown}}
+
 * [TestGreeter]()
 * [TEST_GREETER_VERSION]()
 * [test_greeter_greet]()
