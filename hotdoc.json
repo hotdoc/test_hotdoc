@@ -8,7 +8,6 @@
     ], 
     "gi_index": "test-api.markdown", 
     "git_repo": ".", 
-    "python_index": "python-api.markdown", 
     "c_sources": [
         "*.c", 
         "*.h"
