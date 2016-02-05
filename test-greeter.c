@@ -210,7 +210,7 @@ test_greeter_do_foo_bar (gint *foo, gchar *bar)
  * @greeter: The #TestGreeter
  * @language: The target #TestGreeterLanguage
  *
- * Returns: a #TestGreeterTranslateFunction for the target @language or %NULL.
+ * Returns: (transfer none): a #TestGreeterTranslateFunction for the target @language or %NULL.
  * Stability: unstable
  */
 TestGreeterTranslateFunction
