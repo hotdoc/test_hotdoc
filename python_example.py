@@ -1,31 +1,57 @@
 # -*- coding: utf-8 -*-
 
-class Channel(object):
-    """A Channel for notifications.
-    Usually not constructed directly, instead it is returned from helper
-    functions like new_webhook_channel().
-    Attributes:
-      type: str, The type of delivery mechanism used by this channel. For
-        example, 'web_hook'.
-      id: str, A UUID for the channel.
-      token: str, An arbitrary string associated with the channel that
-        is delivered to the target address with each event delivered
-        over this channel.
-      address: str, The address of the receiving entity where events are
-        delivered. Specific to the channel type.
-      expiration: int, The time, in milliseconds from the epoch, when this
-        channel will expire.
-      params: dict, A dictionary of string to string, with additional parameters
-        controlling delivery channel behavior.
-      resource_id: str, An opaque id that identifies the resource that is
-        being watched. Stable across different API versions.
-      resource_uri: str, The canonicalized ID of the watched resource.
+"""
+A random short description.
+
+And a random, not really longer one.
+"""
+
+def my_module_level_function(an_arg, another_arg):
+    """A module-level function
+
+    This is really just a simple function.
+
+    Arguments:
+        an_arg: bool, just an argument
+        another_arg: dict, just another argument
     """
 
-    def simple_function(self):
+class AClass(object):
+    """A class.
+
+    It's really just a class.
+
+    Attributes:
+        my_int_attribute: int, an integer attribute
+        my_outside_init_int_attribute: int, an integer attribute
+            defined outside the __init__ function.
+    """
+
+    def __init__(self, an_arg):
+        """Construct an instance of AClass.
+
+        Doesn't really do much more.
+
+        Arguments:
+            an_arg: str, just an argument, not really used.
+        """
+        self.my_int_attribute = 38
+
+    def simple_function(self, an_arg):
         """
         Simple doc for a simple function.
 
-        Linking to :class:`Channel` though.
-        Linking to it real hard `python_example.Channel` yo
+        Linking to :class:`AClass` though.
+        Linking to it real hard `python_example.AClass`
+
+        This also defines an attribute outside of `__init__`,
+        bad style but what can you do?
+
+        Arguments:
+            an_arg: str, just an arg, not really used.
+
+        Returns:
+            int: A random int
         """
+        self.my_outside_init_int_attribute = 38
+        return 42 
