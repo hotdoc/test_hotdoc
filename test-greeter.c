@@ -144,7 +144,7 @@ test_greeter_deprecated_function(TestGreeter *greeter)
  * @self: The #TestGreeter
  * @name: The name to greet
  * @translator: (allow-none) (scope async): A function that will need
- * to translate "hello", or %NULL.
+ * to translate "hello", or %NULL .
  *
  * Will greet whoever you want, you can specify a function
  * to translate the greetings. testing this again and again
@@ -191,7 +191,7 @@ test_greeter_greet (TestGreeter *self,
  * are correctly interpreted as return values for python and javascript.
  *
  * This function also checks that referring to signals that way:
- * #TestGreeter::greeted works correctly.
+ * #TestGreeter::greeted works correctly
  *
  * Returns: A nice number
  * Since: 0.8
@@ -209,6 +209,14 @@ test_greeter_do_foo_bar (gint *foo, gchar *bar)
  * test_greeter_get_translate_function:
  * @greeter: The #TestGreeter
  * @language: The target #TestGreeterLanguage
+ *
+ * This function is also here to check that piped tables work.
+ *
+ * |  First column  |  Second one |
+ * |----------------|-------------|
+ * | First content  | And second  |
+ * | a | b |
+ *
  *
  * Returns: (transfer none): a #TestGreeterTranslateFunction for the target @language or %NULL.
  * Stability: unstable
