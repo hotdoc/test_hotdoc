@@ -25,3 +25,7 @@ You can now run hotdoc with:
 ```
 hotdoc run --conf-file ../hotdoc.json
 ```
+
+### Licensing
+
+test_hotdoc is licensed under the DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE , see `COPYING` for more details.
