@@ -1,6 +1,6 @@
 ## Hotdoc Test
 
-Welcome to the Hotdoc test documentation amigo mio.
+Welcome to the Hotdoc test documentation!
 
 #### [GObject API reference](gobject-api)
 #### [DBus API reference](dbus-api)

@@ -212,9 +212,9 @@ test_greeter_do_foo_bar (gint *foo, gchar *bar)
  *
  * This function is also here to check that piped tables work.
  *
- * |  First column  |  Second one |
- * |----------------|-------------|
- * | First content  | And second  |
+ * |  First column that is pretty long really don't you think? |  Second one |
+ * |-----------------------------------------------------------|-------------|
+ * | First content that can take quite some room               | And second  |
  * | a | b |
  *
  *
