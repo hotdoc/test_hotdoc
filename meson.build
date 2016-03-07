@@ -7,7 +7,7 @@ gobject_dep = dependency('gobject-2.0')
 sources = ['test-greeter.c', 'test-other-file.c']
 headers = ['test-greeter.h', 'test-other-file.h']
 
-test_lib = shared_library('test_lib',
+test_lib = shared_library('testlib',
 		          sources,
 		          install: true,
 		          dependencies: [glib_dep, gobject_dep],
