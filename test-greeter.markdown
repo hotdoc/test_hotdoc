@@ -13,6 +13,5 @@ this {{should_not_exist.markdown}}
 * [TEST_GREETER_UPDATE_GREET_COUNT]()
 * [TestGreeterTranslateFunction]()
 * [test_greeter_greet_count]()
-* [test_greeter_do_foo_bar]()
 * [TestGreeterCountUnit]()
 * [TestGreeterLanguage]()

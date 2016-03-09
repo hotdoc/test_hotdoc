@@ -195,6 +195,7 @@ test_greeter_greet (TestGreeter *self,
  *
  * Returns: A nice number
  * Since: 0.8
+ * Topic: Symbols topic
  * my_tag: bar
  */
 guint
