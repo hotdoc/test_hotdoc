@@ -6,13 +6,14 @@
     "pkg_config_packages": [
         "gobject-2.0"
     ], 
-    "gi_index": "test-api.markdown", 
     "git_repo": ".", 
     "c_sources": [
-        "*.c", 
-        "*.h"
+        "test-greeter.c",
+	"test-other-file.c",
+        "test-greeter.h",
+	"test-other-file.h"
     ], 
-    "index": "index.markdown", 
+    "index": "markdown_files/index.markdown", 
     "python_sources": [
         "python_example.py"
     ], 
@@ -26,7 +27,9 @@
         "javascript"
     ], 
     "output": "html", 
-    "gir_file": "build/Test-1.0.gir", 
+    "gir_file": "build/Test-1.0.gir",
+    "gi_smart_index": true,
+    "gi_index": "gi-index.markdown",
     "dbus_index": "test-dbus-api.markdown",
     "add_anchors": true,
     "include_paths": ["."]
