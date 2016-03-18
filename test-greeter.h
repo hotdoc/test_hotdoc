@@ -2,6 +2,7 @@
 #define TEST_GREETER_H_
 
 #include <glib-object.h>
+#include "test_include.h"
 
 G_BEGIN_DECLS
 

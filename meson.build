@@ -7,11 +7,14 @@ gobject_dep = dependency('gobject-2.0')
 sources = ['test-greeter.c', 'test-other-file.c']
 headers = ['test-greeter.h', 'test-other-file.h']
 
+incdir = include_directories('test_include')
+
 test_lib = shared_library('testlib',
 		          sources,
 		          install: true,
 		          dependencies: [glib_dep, gobject_dep],
 		          c_args: ['-Wno-pedantic'],
+			  include_directories: incdir,
 		         )
 
 gir = gnome.generate_gir(test_lib,

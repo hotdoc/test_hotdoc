@@ -12,7 +12,8 @@
 	"test-other-file.c",
         "test-greeter.h",
 	"test-other-file.h"
-    ], 
+    ],
+    "c_include_directories": ["test_include"],
     "index": "markdown_files/index.markdown", 
     "python_sources": [
         "python_example.py"
@@ -27,7 +28,7 @@
         "javascript"
     ], 
     "output": "html", 
-    "gir_file": "build/Test-1.0.gir",
+    "gi_sources": ["build/Test-1.0.gir"],
     "gi_smart_index": true,
     "gi_index": "gi-index.markdown",
     "dbus_index": "test-dbus-api.markdown",
