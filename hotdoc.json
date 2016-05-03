@@ -18,6 +18,7 @@
     "python_sources": [
         "python_example.py"
     ], 
+    "python_smart_index": true,
     "major_version": "0.1", 
     "tag_prototypes": [
         "my_tag:foo,bar,baz:foo"
@@ -27,11 +28,14 @@
         "python", 
         "javascript"
     ], 
-    "output": "html", 
+    "output": "build/built_doc", 
     "gi_sources": ["build/Test-1.0.gir"],
     "gi_smart_index": true,
     "gi_index": "gi-index.markdown",
     "dbus_index": "test-dbus-api.markdown",
-    "add_anchors": true,
-    "include_paths": ["."]
+    "dbus_smart_index": true,
+    "project_name": "HotdocTest",
+    "project_version": "0.1",
+    "devhelp_activate": true,
+    "sitemap": "sitemap.txt"
 }
