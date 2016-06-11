@@ -7,6 +7,8 @@
  *
  * This function will @bar ze @foo, provided
  * the foo is nice and not a la wack bar.
+ *
+ * Returns: A barred foo
  */
 gint
 test_bar_ze_foo(gint bar, gint foo)
@@ -20,6 +22,8 @@ test_bar_ze_foo(gint bar, gint foo)
  * @other_bar: another, nicer bar
  *
  * This function will bar ze wack bar with a nicer bar
+ *
+ * Returns: A really barred bar
  */
 gint
 test_bar_ze_bar(gint bar, gint other_bar)
