@@ -3,6 +3,7 @@
   org.test.greeter:
   @short_description: The greeter service provides greeting services. Be polite, #machineshavefeelings
 
+  Simple class comment
 -->
 
 <interface name="org.test.greeter">
@@ -19,7 +20,7 @@
     <arg name="name" direction="in" type="s"/>
   </method>
 
-<!--
+  <!--
     CompletedGreet:
     @name: The name that was greeted
 
