@@ -4,8 +4,6 @@ TestGreeterCountUnit test_greeter_greet_count = 0;
 
 /**
  * TestGreeter::TestGreeter:
- * @short_description: This is a very helpful greeting API.
- * @title: The Test Greeter
  *
  * A #TestGreeter will certainly greet you at some
  * point, so be prepared.
@@ -84,7 +82,10 @@ test_greeter_class_init (TestGreeterClass *klass)
    * @object: A random GObject
    * @other_greeter: A peer greeter, greeting is better done together
    *
-   * Signals that the greeter greeted somebody plop.
+   * Signals that the greeter greeted somebody.
+   *
+   * THIS WARNING IS EXPECTED!
+   * Linking to a symbol that #does-not-exist
    *
    * Stability: unstable
    * Returns: A random string
@@ -130,6 +131,8 @@ translate_to_french (TestGreeter *greeter, const gchar *word)
  * because it really sucked.
  *
  * Mentioning %TEST_GREETER_ENGLISH by the way
+ * THIS SHOULD NOT RAISE A WARNING
+ * Not linking here as we escape \#not-a-link
  *
  * Deprecated: 0.7
  */
@@ -147,15 +150,15 @@ test_greeter_deprecated_function(TestGreeter *greeter)
  * to translate "hello", or %NULL .
  *
  * Will greet whoever you want, you can specify a function
- * to translate the greetings. testing this again and again
+ * to translate the greetings.
  *
- * {{includeme.markdown}}
+ * {{ includeme.markdown }}
  *
  * Just {{include something .markdown}} at the middle of a line
  *
  * And here we have a C example included from a symbol name
  *
- * {{greeter_example.c#include_an_example_symbol[1:4][8:9]}}
+ * {{../greeter_example.c#include_an_example_symbol[1:4][8:9]}}
  *
  * Since: 0.5
  * my_tag: baz

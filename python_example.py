@@ -15,7 +15,6 @@ def my_module_level_function(an_arg, another_arg):
         an_arg: bool, just an argument
         another_arg: dict, just another argument
     """
-
 class AClass(object):
     """A class.
 
@@ -28,7 +27,7 @@ class AClass(object):
     """
 
     def __init__(self, an_arg):
-        """Construct an instance of AClass.
+        """Construct an instance of `AClass`.
 
         Doesn't really do much more.
 

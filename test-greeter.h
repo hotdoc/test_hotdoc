@@ -4,6 +4,14 @@
 #include <glib-object.h>
 #include "test_include.h"
 
+/**
+ * SECTION:test-greeter.h
+ * @title: TestGreeter
+ * @short_description: a *short* description
+ *
+ * This is a module to greet people.
+ */
+
 G_BEGIN_DECLS
 
 #define TEST_TYPE_GREETER (test_greeter_get_type ())
@@ -40,8 +48,10 @@ typedef gint TestGreeterCountUnit;
  */
 struct _TestGreeterClass
 {
+  /*< private >*/
   GObjectClass parent_class;
 
+  /*< public >*/
   void (*do_greet) (TestGreeter *greeter, const gchar *name, TestGreeterTranslateFunction func);
 };
 

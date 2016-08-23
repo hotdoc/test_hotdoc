@@ -9,9 +9,10 @@
   <!--
     Greet:
     @name: Name to greet
-    @since: 1.0
 
     Function that greets the given @name
+
+    since: 1.0
   -->
   <method name="Greet">
     <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
@@ -21,9 +22,10 @@
 <!--
     CompletedGreet:
     @name: The name that was greeted
-    @since: 1.0
 
     Function that signals @name was greeted.
+
+    since: 1.0
   -->
   <method name="CompletedGreet">
     <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
@@ -33,9 +35,10 @@
   <!--
     InformGreeting:
     @name: name that is being greeted
-    @since: 1.0
 
     Signal emitted when @name is greeted
+
+    since: 1.4
   -->
   <signal name="InformGreeting">
     <arg name="name" type="s"/>
@@ -43,9 +46,10 @@
 
   <!--
     LastGreetedName:
-    @since: 1.1
 
     Get the last name that was greeted
+
+    since: 1.1
   -->
   <property name="LastGreetedName" type="s" access="read"/>
 </interface>
