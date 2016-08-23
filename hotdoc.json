@@ -2,11 +2,9 @@
     "dbus_sources": [
         "*.xml"
     ], 
-    "output_format": "html", 
     "pkg_config_packages": [
         "gobject-2.0"
     ], 
-    "git_repo": ".", 
     "c_sources": [
         "test-greeter.c",
 	"test-other-file.c",
@@ -19,7 +17,6 @@
         "python_example.py"
     ], 
     "python_smart_index": true,
-    "major_version": "0.1", 
     "tag_prototypes": [
         "my_tag:foo,bar,baz:foo"
     ], 
@@ -38,7 +35,6 @@
     "project_version": "0.1",
     "devhelp_activate": true,
     "syntax_highlighting_activate": true,
-    "html_theme": "/home/meh/devel/hotdoc/hotdoc_bootstrap_theme/dist",
     "default-license": "CC-BY-SAv4.0",
     "default-copyright-holders": [{"name": "Amiga incorporated",
 	    			   "years": [1984, 1985],
