@@ -1,29 +1,56 @@
-This is a test project for [hotdoc](https://github.com/hotdoc/hotdoc)
+# test_hotdoc
 
-This project uses the gobject-introspection extension, and is configured
-to use a gir file at build/Test-1.0.gir.
+This is a test project for [hotdoc](https://github.com/hotdoc/hotdoc).
+Its purpose is to exercise as many of hotdoc's capabilities in as little
+code as possible.
 
-You can either build it yourself:
+The reference output is visible at <https://people.collabora.com/~meh/test_hotdoc/index.html>
+
+## Building it
+
+### System-wide dependencies
+
+On Fedora:
 
 ```
-$ mkdir build
-$ cd build
-$ meson ..
-$ ninja
+dnf install graphviz-devel python-devel libxml2-devel libxslt-devel cmake libyaml-devel meson clang-devel llvm-devel flex
 ```
 
-or copy over the default gir:
+And on Ubuntu / Debian:
+
+```
+apt-get install libgraphviz-dev python-dev libxml2-dev libxslt1-dev cmake libyaml-dev meson libclang-dev llvm-dev flex
+```
+
+### Python dependencies
+
+```
+pip2 install virtualenv
+virtualenv --python=python2.7 hotdoc_env
+. hotdoc_env/bin/activate
+pip install -r requirements.txt
+```
+
+### Actual build
 
 ```
 mkdir build
-cp Test-1.0.gir build
 cd build
-```
-
-You can now run hotdoc with:
-
-```
+meson ..
+ninja-build || ninja
 hotdoc run --conf-file ../hotdoc.json
+```
+
+### Rebuilding from scratch
+
+```
+touch ../hotdoc.json && hotdoc run --conf-file ../hotdoc.json
+```
+
+### Rebuilding with lots of logs
+
+```
+touch ../hotdoc.json && hotdoc run --conf-file ../hotdoc.json -vv
 ```
 
 ### Licensing

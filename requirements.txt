@@ -1,0 +1,10 @@
+hotdoc
+hotdoc_dbus_extension
+hotdoc_devhelp_extension
+hotdoc_python_extension
+hotdoc_syntax_highlighting_extension
+hotdoc_search_extension
+hotdoc_tag_extension
+hotdoc_gi_extension
+hotdoc_license_extension
+hotdoc_c_extension
