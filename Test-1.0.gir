@@ -10,35 +10,13 @@ and/or use gtk-doc annotations.  -->
   <package name="test"/>
   <namespace name="Test"
              version="1.0"
-             shared-library="libtest_lib.so"
+             shared-library="libtestlib.so"
              c:identifier-prefixes="Test"
              c:symbol-prefixes="test_">
     <alias name="GreeterCountUnit" c:type="TestGreeterCountUnit">
       <doc xml:space="preserve">The unit in which greets are counted.</doc>
       <type name="gint" c:type="gint"/>
     </alias>
-    <function_macro name="GREETER" c:identifier="TEST_GREETER">
-      <parameters>
-        <parameter name="obj">
-        </parameter>
-      </parameters>
-    </function_macro>
-    <function_macro name="GREETER_CLASS" c:identifier="TEST_GREETER_CLASS">
-      <parameters>
-        <parameter name="klass">
-        </parameter>
-      </parameters>
-    </function_macro>
-    <function_macro name="GREETER_UPDATE_GREET_COUNT"
-                    c:identifier="TEST_GREETER_UPDATE_GREET_COUNT">
-      <doc xml:space="preserve">Increments the greet counter.
-
-MT safe.</doc>
-      <parameters>
-        <parameter name="greeter">
-        </parameter>
-      </parameters>
-    </function_macro>
     <constant name="GREETER_VERSION" value="1.0" c:type="TEST_GREETER_VERSION">
       <doc xml:space="preserve">The current version of the #TestGreeter</doc>
       <type name="utf8" c:type="gchar*"/>
@@ -59,7 +37,10 @@ the variables please;</doc>
 are correctly interpreted as return values for python and javascript.
 
 This function also checks that referring to signals that way:
-#TestGreeter::greeted works correctly.</doc>
+#TestGreeter::greeted works correctly</doc>
+        <doc-version xml:space="preserve">
+Topic: A topic
+my_tag: bar</doc-version>
         <return-value transfer-ownership="none">
           <doc xml:space="preserve">A nice number</doc>
           <type name="guint" c:type="guint"/>
@@ -79,7 +60,6 @@ This function also checks that referring to signals that way:
         </parameters>
       </function>
       <virtual-method name="do_greet" introspectable="0">
-        <doc xml:space="preserve">Subclasses can implement this to greet themselves</doc>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
         </return-value>
@@ -96,11 +76,37 @@ This function also checks that referring to signals that way:
           </parameter>
         </parameters>
       </virtual-method>
+      <method name="deprecated_function"
+              c:identifier="test_greeter_deprecated_function"
+              deprecated="1"
+              deprecated-version="0.7">
+        <doc xml:space="preserve">This is just a function that we will mark as deprecated
+because it really sucked.
+
+Mentioning %TEST_GREETER_ENGLISH by the way
+THIS SHOULD NOT RAISE A WARNING
+Not linking here as we escape \#not-a-link</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="greeter" transfer-ownership="none">
+            <doc xml:space="preserve">a random greeter</doc>
+            <type name="Greeter" c:type="TestGreeter*"/>
+          </instance-parameter>
+        </parameters>
+      </method>
       <method name="get_translate_function"
               c:identifier="test_greeter_get_translate_function"
               introspectable="0"
               stability="Unstable">
-        <return-value>
+        <doc xml:space="preserve">This function is also here to check that piped tables work.
+
+|  First column that is pretty long really don't you think? |  Second one |
+|-----------------------------------------------------------|-------------|
+| First content that can take quite some room               | And second  |
+| a | b |</doc>
+        <return-value transfer-ownership="none">
           <doc xml:space="preserve">a #TestGreeterTranslateFunction for the target @language or %NULL.</doc>
           <type name="GreeterTranslateFunction"
                 c:type="TestGreeterTranslateFunction"/>
@@ -118,7 +124,17 @@ This function also checks that referring to signals that way:
       </method>
       <method name="greet" c:identifier="test_greeter_greet" version="0.5">
         <doc xml:space="preserve">Will greet whoever you want, you can specify a function
-to translate the greetings.</doc>
+to translate the greetings.
+
+{{ includeme.markdown }}
+
+Just {{include something .markdown}} at the middle of a line
+
+And here we have a C example included from a symbol name
+
+{{../greeter_example.c#include_an_example_symbol[1:4][8:9]}}</doc>
+        <doc-version xml:space="preserve">
+my_tag: baz</doc-version>
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
         </return-value>
@@ -137,7 +153,7 @@ to translate the greetings.</doc>
                      allow-none="1"
                      scope="async">
             <doc xml:space="preserve">A function that will need
-to translate "hello", or %NULL.</doc>
+to translate "hello", or %NULL .</doc>
             <type name="GreeterTranslateFunction"
                   c:type="TestGreeterTranslateFunction"/>
           </parameter>
@@ -168,7 +184,10 @@ to translate "hello", or %NULL.</doc>
                    when="last"
                    version="0.9"
                    stability="Unstable">
-        <doc xml:space="preserve">Signals that the greeter greeted somebody plop.</doc>
+        <doc xml:space="preserve">Signals that the greeter greeted somebody.
+
+THIS WARNING IS EXPECTED!
+Linking to a symbol that #does-not-exist</doc>
         <return-value transfer-ownership="full">
           <doc xml:space="preserve">A random string</doc>
           <type name="utf8" c:type="gchar*"/>
@@ -192,7 +211,7 @@ to translate "hello", or %NULL.</doc>
     <record name="GreeterClass"
             c:type="TestGreeterClass"
             glib:is-gtype-struct-for="Greeter">
-      <field name="parent_class">
+      <field name="parent_class" readable="0" private="1">
         <type name="GObject.ObjectClass" c:type="GObjectClass"/>
       </field>
       <field name="do_greet" introspectable="0">
@@ -243,22 +262,10 @@ so that @greeter knows how to greet properly.</doc>
         </parameter>
       </parameters>
     </callback>
-    <function_macro name="IS_GREETER" c:identifier="TEST_IS_GREETER">
-      <parameters>
-        <parameter name="obj">
-        </parameter>
-      </parameters>
-    </function_macro>
-    <function_macro name="IS_GREETER_CLASS"
-                    c:identifier="TEST_IS_GREETER_CLASS">
-      <parameters>
-        <parameter name="klass">
-        </parameter>
-      </parameters>
-    </function_macro>
     <function name="bar_ze_bar" c:identifier="test_bar_ze_bar">
       <doc xml:space="preserve">This function will bar ze wack bar with a nicer bar</doc>
       <return-value transfer-ownership="none">
+        <doc xml:space="preserve">A really barred bar</doc>
         <type name="gint" c:type="gint"/>
       </return-value>
       <parameters>
@@ -276,6 +283,7 @@ so that @greeter knows how to greet properly.</doc>
       <doc xml:space="preserve">This function will @bar ze @foo, provided
 the foo is nice and not a la wack bar.</doc>
       <return-value transfer-ownership="none">
+        <doc xml:space="preserve">A barred foo</doc>
         <type name="gint" c:type="gint"/>
       </return-value>
       <parameters>
