@@ -9,7 +9,9 @@
         "test-greeter.c",
 	"test-other-file.c",
         "test-greeter.h",
-	"test-other-file.h"
+	"test-other-file.h",
+	"test-interface.c",
+	"test-interface.h"
     ],
     "c_include_directories": ["test_include"],
     "index": "markdown_files/index.markdown", 

@@ -4,8 +4,8 @@ gnome = import ('gnome')
 glib_dep = dependency('glib-2.0')
 gobject_dep = dependency('gobject-2.0')
 
-sources = ['test-greeter.c', 'test-other-file.c']
-headers = ['test-greeter.h', 'test-other-file.h']
+sources = ['test-greeter.c', 'test-other-file.c', 'test-interface.c']
+headers = ['test-greeter.h', 'test-other-file.h', 'test-interface.h']
 
 incdir = include_directories('test_include')
 
