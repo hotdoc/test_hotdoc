@@ -119,7 +119,7 @@ G_STMT_START {                                   \
  *
  * A language for greeting.
  */
-typedef enum {
+typedef enum _TestGreeterLanguage {
   TEST_GREETER_ENGLISH,
   TEST_GREETER_FRENCH
 } TestGreeterLanguage;

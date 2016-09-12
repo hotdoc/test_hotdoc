@@ -6,7 +6,7 @@
  * Documenting the TestInterface interface.
  */
 
-G_DEFINE_INTERFACE (TestInterface, test_interface, G_TYPE_OBJECT);
+G_DEFINE_INTERFACE (TestInterface, test_interface, TEST_TYPE_GREETER);
 
 static void
 test_interface_default_init (TestInterfaceInterface *iface)

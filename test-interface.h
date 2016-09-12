@@ -2,6 +2,7 @@
 #define __TEST_INTERFACE_H__
 
 #include <glib-object.h>
+#include "test-greeter.h"
 
 /**
  * SECTION:test-interface.h

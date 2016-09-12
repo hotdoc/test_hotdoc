@@ -1,7 +1,7 @@
 <node>
 <!--
   org.test.greeter:
-  @short_description: The greeter service provides greeting services. Be polite, #machineshavefeelings
+  @short_description: The greeter service provides greeting services. Be polite, \#machineshavefeelings
 
   Simple class comment
 -->

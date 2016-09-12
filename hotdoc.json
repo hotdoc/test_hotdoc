@@ -11,7 +11,9 @@
         "test-greeter.h",
 	"test-other-file.h",
 	"test-interface.c",
-	"test-interface.h"
+	"test-interface.h",
+	"test-gobject-macros.c",
+	"test-gobject-macros.h"
     ],
     "c_include_directories": ["test_include"],
     "index": "markdown_files/index.markdown", 
