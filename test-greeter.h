@@ -99,6 +99,7 @@ test_greeter_do_foo_bar (gint *foo, gchar *bar);
 
 /**
  * TEST_GREETER_UPDATE_GREET_COUNT:
+ * @greeter: a #TestGreeter
  *
  * Increments the greet counter.
  *
