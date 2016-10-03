@@ -7,6 +7,9 @@ TestGreeterCountUnit test_greeter_greet_count = 0;
  *
  * A #TestGreeter will certainly greet you at some
  * point, so be prepared.
+ *
+ * Linking to #TestGreeter::TestGreeter
+ * Linking to g_type_init()
  */
 
 G_DEFINE_TYPE(TestGreeter, test_greeter, G_TYPE_OBJECT);

@@ -43,7 +43,7 @@ typedef gchar * (* TestGreeterTranslateFunction) (TestGreeter *greeter, const gc
 typedef gint TestGreeterCountUnit;
 
 /**
- * TestGreeterClass:
+ * _TestGreeterClass:
  * @do_greet: Subclasses can implement this to greet themselves
  */
 struct _TestGreeterClass
@@ -56,7 +56,7 @@ struct _TestGreeterClass
 };
 
 /**
- * TestGreeter:
+ * _TestGreeter:
  * @greet_count: The number of times the greeter greeted.
  * @peer: A peer #TestGreeter
  *
