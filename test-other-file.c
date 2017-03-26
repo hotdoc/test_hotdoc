@@ -1,4 +1,4 @@
-#include "test-other-file.h"
+#include "test other-file.h"
 
 /**
  * test_bar_ze_foo:
@@ -24,7 +24,10 @@ test_bar_ze_foo(gint bar, gint foo)
  * This function will bar ze wack bar with a nicer bar
  *
  * Linking to %TEST_GREETER_ENGLISH
- * Linking to #_TestGreeter.peer
+ *
+ * Linking to #TestGreeter.peer
+ *
+ * Linking to #TestGreeter
  *
  * Returns: A really barred bar
  */

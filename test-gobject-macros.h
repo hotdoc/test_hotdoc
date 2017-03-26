@@ -14,6 +14,12 @@
 
 G_BEGIN_DECLS
 
+/**
+ * TestDerivable:
+ *
+ * A derivable class declared with convenience macros.
+ */
+
 #define TEST_TYPE_DERIVABLE (test_derivable_get_type ())
 G_DECLARE_DERIVABLE_TYPE (TestDerivable, test_derivable, TEST, DERIVABLE, GObject)
 
@@ -23,6 +29,13 @@ struct _TestDerivableClass
 
   gpointer _padding[10];
 };
+
+/**
+ * TestFinal:
+ *
+ * A final class, not meant to be inherited from, declared with convenience
+ * macros.
+ */
 
 #define TEST_TYPE_FINAL (test_final_get_type ())
 G_DECLARE_FINAL_TYPE (TestFinal, test_final, TEST, FINAL, GObject)

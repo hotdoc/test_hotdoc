@@ -43,6 +43,13 @@ typedef gchar * (* TestGreeterTranslateFunction) (TestGreeter *greeter, const gc
 typedef gint TestGreeterCountUnit;
 
 /**
+ * TestGreeterThing:
+ *
+ * A thing.
+ */
+typedef const GObject *TestGreeterThing;
+
+/**
  * _TestGreeterClass:
  * @do_greet: Subclasses can implement this to greet themselves
  */
@@ -53,6 +60,17 @@ struct _TestGreeterClass
 
   /*< public >*/
   void (*do_greet) (TestGreeter *greeter, const gchar *name, TestGreeterTranslateFunction func);
+};
+
+/**
+ * TestSomeStruct:
+ *
+ * Just a random record.
+ */
+
+struct TestSomeStruct
+{
+  gboolean plop;
 };
 
 /**

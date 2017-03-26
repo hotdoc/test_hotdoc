@@ -17,3 +17,7 @@ license: CC-BY-SA
 ## GObject API
 
 This is a smart index, hotdoc will link documentation pages generated for each header file in the project here.
+
+Linking to [the index](index.markdown) by the way!
+
+And linking to [myself](gi-index)

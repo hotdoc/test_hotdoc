@@ -1,3 +1,7 @@
+---
+extra: {test-meta: yo;baby}
+...
+
 ## Hotdoc Test
 
 Welcome to the Hotdoc test documentation!
@@ -7,3 +11,9 @@ Welcome to the Hotdoc test documentation!
 | content  | content  |
 
 {{ includeme.markdown }}
+
+Linking to [another page](another-page.markdown)
+Linking to an [external domain](http://test.com)
+Linking to [](test_greeter_greet) as well!
+
+Hola weoncito!

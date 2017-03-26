@@ -1,6 +1,9 @@
 index.markdown
+	sub/lol.md
+	yo/lol.md
+	another-page.markdown
 	gi-index
-		test-other-file.h
+		test other-file.h
 	dbus-index
 		org.test.greeter.xml
 	python-index
