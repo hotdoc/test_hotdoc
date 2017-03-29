@@ -21,3 +21,5 @@ This is a smart index, hotdoc will link documentation pages generated for each h
 Linking to [the index](index.markdown) by the way!
 
 And linking to [myself](gi-index)
+
+And linking to the [subproject](Subproject)

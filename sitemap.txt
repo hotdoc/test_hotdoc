@@ -7,3 +7,5 @@ index.markdown
 	dbus-index
 		org.test.greeter.xml
 	python-index
+		test-other-file.h
+	../subproject/subproject.json
