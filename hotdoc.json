@@ -9,7 +9,7 @@
         "test-greeter.c",
 	"test-other-file.c",
         "test-greeter.h",
-	"test other-file.h",
+	"test-other-file.h",
 	"test-interface.c",
 	"test-interface.h",
 	"test-gobject-macros.c",
@@ -32,7 +32,7 @@
         "javascript"
     ], 
     "extra_assets": ["images"],
-    "output": "build/built_doc", 
+    "output": "docs/",
     "gi_sources": ["build/Test-1.0.gir"],
     "gi_smart_index": true,
     "gi_index": "markdown_files/gi-index.markdown",

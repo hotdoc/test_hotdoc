@@ -3,9 +3,5 @@ index.markdown
 	yo/lol.md
 	another-page.markdown
 	gi-index
-		test other-file.h
-	dbus-index
-		org.test.greeter.xml
-	python-index
 		test-other-file.h
 	../subproject/subproject.json

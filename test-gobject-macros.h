@@ -5,7 +5,7 @@
 
 /**
  * SECTION: test-gobject-macros.h
- * @title: GObject macros
+ * @title: Derivable and more
  * @short_description: In this file, we test the G_DECLARE_FINAL_TYPE
  * and G_DECLARE_DERIVABLE_TYPE macros.
  *
@@ -21,6 +21,12 @@ G_BEGIN_DECLS
  */
 
 #define TEST_TYPE_DERIVABLE (test_derivable_get_type ())
+
+/**
+ * TestDerivable:
+ *
+ * A derivable class.
+ */
 G_DECLARE_DERIVABLE_TYPE (TestDerivable, test_derivable, TEST, DERIVABLE, GObject)
 
 struct _TestDerivableClass
@@ -31,6 +37,13 @@ struct _TestDerivableClass
 };
 
 /**
+ * test_derivable_new:
+ *
+ * Returns: A newly built derivable object
+ */
+TestDerivable * test_derivable_new (void);
+
+/**
  * TestFinal:
  *
  * A final class, not meant to be inherited from, declared with convenience
@@ -38,7 +51,14 @@ struct _TestDerivableClass
  */
 
 #define TEST_TYPE_FINAL (test_final_get_type ())
+/**
+ * TestFinal:
+ *
+ * A final class.
+ */
 G_DECLARE_FINAL_TYPE (TestFinal, test_final, TEST, FINAL, GObject)
+
+TestFinal * test_final_new (void);
 
 G_END_DECLS
 
