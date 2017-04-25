@@ -31,6 +31,7 @@
         "python", 
         "javascript"
     ], 
+    "extra_assets": ["images"],
     "output": "build/built_doc", 
     "gi_sources": ["build/Test-1.0.gir"],
     "gi_smart_index": true,

@@ -1,5 +1,6 @@
 ---
 extra: {test-meta: yo;baby}
+render-subpages: false
 ...
 
 ## Hotdoc Test
@@ -8,7 +9,7 @@ Welcome to the Hotdoc test documentation!
 
 | Header 1 | Header 2 |
 | -------- | -------- |
-| content  | content  |
+| content  | very_long_content_in_only_one_word_yes  |
 
 {{ includeme.markdown }}
 
