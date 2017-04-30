@@ -1,6 +1,7 @@
 ---
 extra: {test-meta: yo;baby}
 render-subpages: false
+code-samples-license: CC-BY-SAv4.0
 ...
 
 ## Hotdoc Test
