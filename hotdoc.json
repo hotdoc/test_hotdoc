@@ -5,7 +5,7 @@
     "pkg_config_packages": [
         "gobject-2.0"
     ], 
-    "c_sources": [
+    "gi_c_sources": [
         "test-greeter.c",
         "test-other-file.c",
         "test-greeter.h",
