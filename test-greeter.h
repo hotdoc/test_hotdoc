@@ -149,6 +149,9 @@ test_greeter_get_translate_function (TestGreeter *greeter, TestGreeterLanguage l
 void
 test_greeter_deprecated_function (TestGreeter *greeter);
 
+gchar **
+test_greeter_list_greets (TestGreeter *greeter);
+
 G_END_DECLS
 
 #endif

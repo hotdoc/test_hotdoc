@@ -242,3 +242,15 @@ test_greeter_get_translate_function (TestGreeter *greeter, TestGreeterLanguage l
 
   return NULL;
 }
+
+/**
+ * test_greeter_list_greets:
+ * @greeter: The greatest greeter
+ *
+ * Returns: (transfer full): The list of greetings @greeter can do
+ */
+gchar **
+test_greeter_list_greets (TestGreeter *greeter)
+{
+    return NULL;
+}
