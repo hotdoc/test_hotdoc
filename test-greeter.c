@@ -199,17 +199,17 @@ test_greeter_greet (TestGreeter *self,
  * This function also checks that referring to signals that way:
  * #TestGreeter::greeted works correctly
  *
- * Returns: A nice number
+ * Returns: A nice gchar - should be a int in python.
  * Since: 0.8
  * Topic: A topic
  * my_tag: bar
  */
-guint
+gchar
 test_greeter_do_foo_bar (gint *foo, gchar *bar)
 {
   *foo = 57;
 
-  return 42;
+  return 'a';
 }
 
 /**

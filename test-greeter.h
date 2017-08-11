@@ -10,6 +10,7 @@
  * @short_description: a *short* description
  *
  * This is a module to greet people.
+ * Linking to #TestGreeter:count-greets
  */
 
 G_BEGIN_DECLS
@@ -105,7 +106,7 @@ void test_greeter_greet (TestGreeter *self,
                          const gchar *name,
                          TestGreeterTranslateFunction translator);
 
-guint
+gchar
 test_greeter_do_foo_bar (gint *foo, gchar *bar);
 
 /**
