@@ -254,3 +254,15 @@ test_greeter_list_greets (TestGreeter *greeter)
 {
     return NULL;
 }
+
+/**
+ * test_greeter_get_friends:
+ * @greeter: The greatest greeter
+ *
+ * Returns: (transfer full) (element-type TestGreeter): The **list** of the friends of @greeter
+ */
+GList*
+test_greeter_get_friends (TestGreeter *greeter)
+{
+    return NULL;
+}

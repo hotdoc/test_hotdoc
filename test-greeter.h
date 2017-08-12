@@ -153,6 +153,9 @@ test_greeter_deprecated_function (TestGreeter *greeter);
 gchar **
 test_greeter_list_greets (TestGreeter *greeter);
 
+GList*
+test_greeter_get_friends (TestGreeter *greeter);
+
 G_END_DECLS
 
 #endif
