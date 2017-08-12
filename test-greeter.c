@@ -247,6 +247,8 @@ test_greeter_get_translate_function (TestGreeter *greeter, TestGreeterLanguage l
  * test_greeter_list_greets:
  * @greeter: The greatest greeter
  *
+ * Testing returnins a list of strings.
+ *
  * Returns: (transfer full): The list of greetings @greeter can do
  */
 gchar **
@@ -256,13 +258,65 @@ test_greeter_list_greets (TestGreeter *greeter)
 }
 
 /**
+ * test_greeter_list_languages:
+ * @greeter: The greatest greeter
+ *
+ * Testing list of structs as return value.
+ *
+ * Returns: (array zero-terminated=1): The list of languages @greeter can speak
+ */
+TestGreeterLanguage *
+test_greeter_list_languages (TestGreeter *greeter)
+{
+    static TestGreeterLanguage languages[] = {TEST_GREETER_FRENCH, 0};
+
+    return languages;
+}
+
+/**
  * test_greeter_get_friends:
  * @greeter: The greatest greeter
+ *
+ * Test rendering a GList of object as return value,
+ * in python it should properly show the return value
+ * is a list.
  *
  * Returns: (transfer full) (element-type TestGreeter): The **list** of the friends of @greeter
  */
 GList*
 test_greeter_get_friends (TestGreeter *greeter)
 {
-    return NULL;
+  return NULL;
+}
+
+/**
+ * test_greeter_has_friends:
+ * @greeter: The greatest greeter
+ * @friends: (element-type TestGreeter): The friends to check
+ *
+ * Test rendering a GList of object as input, in python it should properly show @friends
+ * is a list.
+ *
+ * Returns: %TRUE all the time, @greet is friendly.
+ */
+gboolean
+test_greeter_has_friends (TestGreeter *greeter, GList *friends)
+{
+    return TRUE;
+}
+
+/**
+ * test_greeter_languages_contains:
+ * @languages: (array zero-terminated=1): The language array to search
+ * @language: the language to find
+ *
+ * Testing list of structs as parametter.
+ *
+ * Returns: %TRUE if the language is found inside the array
+ */
+gboolean
+test_greeter_languages_contains (TestGreeterLanguage * languages,
+        TestGreeterLanguage language)
+{
+  return FALSE;
 }

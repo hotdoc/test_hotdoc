@@ -144,6 +144,9 @@ typedef enum _TestGreeterLanguage {
   TEST_GREETER_FRENCH
 } TestGreeterLanguage;
 
+gboolean
+test_greeter_languages_contains (TestGreeterLanguage * languages, TestGreeterLanguage language);
+
 TestGreeterTranslateFunction
 test_greeter_get_translate_function (TestGreeter *greeter, TestGreeterLanguage language);
 
@@ -155,6 +158,12 @@ test_greeter_list_greets (TestGreeter *greeter);
 
 GList*
 test_greeter_get_friends (TestGreeter *greeter);
+
+TestGreeterLanguage *
+test_greeter_list_languages (TestGreeter *greeter);
+
+gboolean
+test_greeter_has_friends (TestGreeter *greeter, GList *friends);
 
 G_END_DECLS
 
