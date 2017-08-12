@@ -69,10 +69,10 @@ struct _TestGreeterClass
  * Just a random record.
  */
 
-struct TestSomeStruct
+typedef struct _TestSomeStruct
 {
   gboolean plop;
-};
+} TestSomeStruct;
 
 /**
  * _TestGreeter:
@@ -89,6 +89,21 @@ struct _TestGreeter
   /*< public >*/
   TestGreeterCountUnit greet_count;
   TestGreeter *peer;
+
+  union { /* Testing unions */
+      struct {
+          gboolean going_crazy;
+
+          union {
+              struct {
+                  gchar * i_think_so;
+              } Definitely;
+          };
+      };
+
+      guint padding[1];
+  } uniting;
+
   /*< private >*/
   gboolean count_greets;
 };
