@@ -290,6 +290,42 @@ test_greeter_get_friends (TestGreeter *greeter)
 }
 
 /**
+ * test_greeter_get_out_glist_friends:
+ * @greeter: The greatest greeter
+ * @friends: (out) (transfer full) (element-type TestGreeter): The **glist** of the friends of @greeter
+ *
+ * Test rendering a GList of object as out return value,
+ * in python it should properly show the out return value
+ * is a list.
+ *
+ * Returns: %TRUE if @friends could be retrived.
+ */
+gboolean
+test_greeter_get_out_glist_friends (TestGreeter *greeter, GList ** friends)
+{
+  *friends = NULL;
+  return FALSE;
+}
+
+/**
+ * test_greeter_get_out_friends:
+ * @greeter: The greatest greeter
+ * @friends: (out)(array zero-terminated=1)(transfer full): The **list** of the friends of @greeter
+ *
+ * Test rendering an of object as out return value,
+ * in python it should properly show the out return value
+ * is a list.
+ *
+ * Returns: %TRUE if @friends could be retrived.
+ */
+gboolean
+test_greeter_get_out_friends (TestGreeter *greeter, TestGreeter *** friends)
+{
+  *friends = NULL;
+  return FALSE;
+}
+
+/**
  * test_greeter_has_friends:
  * @greeter: The greatest greeter
  * @friends: (element-type TestGreeter): The friends to check

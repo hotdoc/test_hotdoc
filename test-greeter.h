@@ -174,6 +174,12 @@ test_greeter_list_greets (TestGreeter *greeter);
 GList*
 test_greeter_get_friends (TestGreeter *greeter);
 
+gboolean
+test_greeter_get_out_glist_friends (TestGreeter *greeter, GList ** friends);
+
+gboolean
+test_greeter_get_out_friends (TestGreeter *greeter, TestGreeter *** friends);
+
 TestGreeterLanguage *
 test_greeter_list_languages (TestGreeter *greeter);
 
