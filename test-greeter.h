@@ -75,7 +75,7 @@ typedef struct _TestSomeStruct
 } TestSomeStruct;
 
 /**
- * _TestGreeter:
+ * TestGreeter:
  * @greet_count: The number of times the greeter greeted.
  * @peer: A peer #TestGreeter
  *
