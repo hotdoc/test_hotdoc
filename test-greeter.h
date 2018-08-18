@@ -11,6 +11,8 @@
  *
  * This is a module to greet people.
  * Linking to #TestGreeter:count-greets
+ * Linking to #TestInterfaceInterface.do_something
+ * Linking to g_type_init() yo
  */
 
 G_BEGIN_DECLS
@@ -31,6 +33,7 @@ typedef struct _TestGreeterClass TestGreeterClass;
  *
  * This function shall return the translation of @word in any target language,
  * so that @greeter knows how to greet properly.
+ *
  *
  * Returns: (transfer full): The translation of @word
  */
@@ -167,6 +170,9 @@ test_greeter_get_translate_function (TestGreeter *greeter, TestGreeterLanguage l
 
 void
 test_greeter_deprecated_function (TestGreeter *greeter);
+
+void
+test_greeter_skipped_function(TestGreeter *greeter);
 
 gchar **
 test_greeter_list_greets (TestGreeter *greeter);

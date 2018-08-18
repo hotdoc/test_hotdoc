@@ -146,6 +146,17 @@ test_greeter_deprecated_function(TestGreeter *greeter)
 }
 
 /**
+ * test_greeter_skipped_function: (skip)
+ * @greeter: a random greeter
+ *
+ * This is just a function that is not supposed to be introspected.
+ */
+void
+test_greeter_skipped_function(TestGreeter *greeter)
+{
+}
+
+/**
  * test_greeter_greet:
  * @self: The #TestGreeter
  * @name: The name to greet

@@ -5,3 +5,5 @@ index.markdown
 	gi-index
 		test-other-file.h
 	../subproject/subproject.json
+	dbus-index
+		org.test.greeter.xml
