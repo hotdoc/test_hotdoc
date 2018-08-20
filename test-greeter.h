@@ -174,6 +174,9 @@ test_greeter_deprecated_function (TestGreeter *greeter);
 void
 test_greeter_skipped_function(TestGreeter *greeter);
 
+void
+test_greeter_ignored_function(TestGreeter *greeter);
+
 gchar **
 test_greeter_list_greets (TestGreeter *greeter);
 

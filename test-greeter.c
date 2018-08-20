@@ -133,6 +133,8 @@ translate_to_french (TestGreeter *greeter, const gchar *word)
  * This is just a function that we will mark as deprecated
  * because it really sucked.
  *
+ * Linking to [this page](test-greeter.h)
+ *
  * Mentioning %TEST_GREETER_ENGLISH by the way
  * THIS SHOULD NOT RAISE A WARNING
  * Not linking here as we escape \#not-a-link
@@ -153,6 +155,16 @@ test_greeter_deprecated_function(TestGreeter *greeter)
  */
 void
 test_greeter_skipped_function(TestGreeter *greeter)
+{
+}
+
+/**
+ * test_greeter_ignored_function: (attributes doc.skip=true)
+ *
+ * There is no way this function should end up in the documentation
+ */
+void
+test_greeter_ignored_function(TestGreeter *greeter)
 {
 }
 
