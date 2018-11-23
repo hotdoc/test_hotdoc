@@ -181,7 +181,7 @@ gchar **
 test_greeter_list_greets (TestGreeter *greeter);
 
 GList*
-test_greeter_get_friends (TestGreeter *greeter);
+test_greeter_get_friends (TestGreeter *greeter, GError **error);
 
 gboolean
 test_greeter_get_out_glist_friends (TestGreeter *greeter, GList ** friends);

@@ -89,6 +89,7 @@ test_greeter_class_init (TestGreeterClass *klass)
    *
    * THIS WARNING IS EXPECTED!
    * Linking to a symbol that #does-not-exist
+   * Linking to #GMutex
    *
    * Stability: unstable
    * Returns: A random string
@@ -138,6 +139,7 @@ translate_to_french (TestGreeter *greeter, const gchar *word)
  * Mentioning %TEST_GREETER_ENGLISH by the way
  * THIS SHOULD NOT RAISE A WARNING
  * Not linking here as we escape \#not-a-link
+ * Linking to #guint64
  *
  * Deprecated: 0.7
  */
@@ -307,7 +309,7 @@ test_greeter_list_languages (TestGreeter *greeter)
  * Returns: (transfer full) (element-type TestGreeter): The **list** of the friends of @greeter
  */
 GList*
-test_greeter_get_friends (TestGreeter *greeter)
+test_greeter_get_friends (TestGreeter *greeter, GError **error)
 {
   return NULL;
 }
