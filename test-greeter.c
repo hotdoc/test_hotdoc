@@ -3,12 +3,13 @@
 TestGreeterCountUnit test_greeter_greet_count = 0;
 
 /**
- * TestGreeter::TestGreeter:
+ * SECTION:TestGreeter
+ * @title: TestGreeter
+ * @short_description: a *short* description
  *
- * A #TestGreeter will certainly greet you at some
- * point, so be prepared.
- *
- * Linking to #TestGreeter::TestGreeter
+ * This is a module to greet people.
+ * Linking to #TestGreeter:count-greets
+ * Linking to #TestInterfaceInterface.do_something
  * Linking to g_type_init() yo
  */
 

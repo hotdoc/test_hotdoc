@@ -4,17 +4,6 @@
 #include <glib-object.h>
 #include "test_include.h"
 
-/**
- * SECTION:test-greeter.h
- * @title: TestGreeter
- * @short_description: a *short* description
- *
- * This is a module to greet people.
- * Linking to #TestGreeter:count-greets
- * Linking to #TestInterfaceInterface.do_something
- * Linking to g_type_init() yo
- */
-
 G_BEGIN_DECLS
 
 #define TEST_TYPE_GREETER (test_greeter_get_type ())
@@ -77,14 +66,6 @@ typedef struct _TestSomeStruct
   gboolean plop;
 } TestSomeStruct;
 
-/**
- * TestGreeter:
- * @greet_count: The number of times the greeter greeted.
- * @peer: A peer #TestGreeter
- *
- * The #TestGreeter structure. Use the functions to update
- * the variables please;
- */
 struct _TestGreeter
 {
   GObject parent;
